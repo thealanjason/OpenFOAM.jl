@@ -1,0 +1,73 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "constant/polyMesh";
+    object      meshMetaDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaceFile     "constant/surface.stl";
+
+surfaceMeta
+{
+    nPoints         181202;
+    nFacets         362400;
+    nPatches        6;
+    nFeatureEdges   0;
+    patches
+    {
+        terrain
+        {
+            type            empty;
+            nFacets         180000;
+        }
+        top
+        {
+            type            empty;
+            nFacets         180000;
+        }
+        wall0
+        {
+            type            empty;
+            nFacets         600;
+        }
+        wall1
+        {
+            type            empty;
+            nFacets         600;
+        }
+        wall2
+        {
+            type            empty;
+            nFacets         600;
+        }
+        wall3
+        {
+            type            empty;
+            nFacets         600;
+        }
+    }
+    pointSubsets
+    {
+    }
+    facetSubsets
+    {
+    }
+    featureEdgeSubsets
+    {
+    }
+}
+
+lastStep        meshOptimisation;
+
+completedSteps  16 ( start start templateGeneration templateGeneration surfaceTopology surfaceTopology surfaceProjection surfaceProjection patchAssignment patchAssignment edgeExtraction edgeExtraction boundaryLayerGeneration boundaryLayerGeneration meshOptimisation meshOptimisation );
